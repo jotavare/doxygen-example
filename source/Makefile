@@ -19,7 +19,7 @@ docs: $(DOXYFILE)
 $(DOXYFILE):
 	doxygen -g $(DOXYFILE)
 	@echo "PROJECT_NAME           = \"Math Operations\"" >> $(DOXYFILE)
-	@echo "PROJECT_BRIEF          = \"A simple C project demonstrating basic math operations\"" >> $(DOXYFILE)
+	@echo "PROJECT_BRIEF          = \"A simple C project demonstrating basic math operations.\"" >> $(DOXYFILE)
 	@echo "OUTPUT_DIRECTORY       = docs" >> $(DOXYFILE)
 	@echo "GENERATE_LATEX         = NO" >> $(DOXYFILE)
 	@echo "EXTRACT_ALL            = YES" >> $(DOXYFILE)
