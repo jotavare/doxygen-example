@@ -19,16 +19,20 @@ jobs:
         sudo apt-get install -y doxygen
 
     - name: Build
-      run: make
+      run: |
+        cd source
+        make
 
     - name: Generate documentation
-      run: make docs
+      run: |
+        cd source
+        make docs
 
     - name: Archive documentation
       uses: actions/upload-artifact@v4
       with:
         name: doxygen-docs
-        path: docs/html/
+        path: source/docs/html/
         if-no-files-found: warn
         compression-level: 6
         overwrite: false
