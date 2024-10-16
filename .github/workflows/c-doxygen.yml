@@ -1,0 +1,31 @@
+name: C Doxygen CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y doxygen
+
+    - name: Build
+      run: make
+
+    - name: Generate documentation
+      run: make docs
+
+    - name: Archive documentation
+      uses: actions/upload-artifact@v2
+      with:
+        name: doxygen-docs
+        path: html/
