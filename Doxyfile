@@ -1,0 +1,11 @@
+PROJECT_NAME           = "Math Operations"
+PROJECT_BRIEF          = "A simple C project demonstrating basic math operations"
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+INPUT                  = .
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
