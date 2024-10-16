@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
-SRCS = math_operations.c
+SRCS = math_operations.c main.c
 OBJS = $(SRCS:.c=.o)
 MAIN = main
 DOXYFILE = Doxyfile
